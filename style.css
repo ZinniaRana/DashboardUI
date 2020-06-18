@@ -1,0 +1,283 @@
+html { min-height: 100% }
+body {
+    color: #888ea8;
+    height: 100%;
+    font-size: 0.875rem;
+    background: #060818;
+    overflow-x: hidden;
+    overflow-y: auto;
+    letter-spacing: 0.0312rem;
+    font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { color: #ebedf2; }
+
+strong { font-weight: 600; }
+code { color: #e7515a; }
+
+/* 
+=====================
+    Navigation Bar
+=====================
+*/
+.header-container{
+    background: #060818;
+    padding: 5px 0;
+    height: 55px;
+    position: fixed;
+}
+.header{
+    height: 100%;
+}
+.header, .navbar-item{
+    list-style: none;
+    display: flex;
+}
+.theme-logo>img{
+    width: 34px;
+}
+.logo-text{
+    font-size: 24px;
+    padding: 0 10px;
+    font-weight: 700;
+    color: #e0e6ed;
+}
+.search{
+    min-width: 400px;
+    height: 45px;
+    top: 10px;
+    padding: 0px 4px 0px 35px;
+    background-color: #0e1726;
+    border: 1px solid rgba(81, 83, 101, 0.28);
+    border-radius: 6px;
+    font-size: 14px;
+}
+.search-animated>svg{
+    cursor: pointer;
+    color: #888ea8;
+    top: 12px;
+    width: 18px;
+    position: absolute;
+    margin: 0 7px;
+}
+.flag-width{
+    width: 28px;
+    height: 20px;
+    padding-right: 8px;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+.navbar-item .nav-link {
+    line-height: 2.75rem;
+    padding: 0 10px;
+    text-transform: initial;
+    position: unset;
+}
+.nav-link svg {
+    color: #888ea8;
+    width: 22px;
+    height: 22px;
+}
+.profile-dropdown .nav-link img {
+    width: 22px;
+}
+.sub-header-container {
+    position: fixed;
+    top: 53px;
+    min-height: 53px;
+    width: 100%;
+    z-index: 1029;
+    background-color:rgb(26, 28, 45);
+}
+.sidebarCollapse svg {
+    width: 20px;
+    height: 20px;
+    color: #e0e6ed;
+}
+.sidebarCollapse{
+    padding: 0 25px 0 31px;
+}
+.navbar-nav li{
+    padding: 0 5px 0 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.custom-dropdown-icon a.dropdown-toggle {
+    border: 1px solid #3b3f5c;
+    border-radius: 8px;
+    font-size: 13px;
+    background-color: rgb(26, 28, 45);
+    letter-spacing: normal;
+    color: #e0e6ed;
+    box-shadow: none;
+    max-height: 35px;
+    padding: 0.4375rem 1.25rem;
+}
+.sidebar-wrapper{
+    width: 220px;
+    position: fixed;
+    top: 120px;
+    left: 16px;
+    overflow: auto;
+}
+.menu-categories{
+    height: calc(100vh - 107px)!important;
+    margin-right: 0;
+    padding: 0px 22px 0px 0px;
+    border-right: 1px solid #0e1726;
+}
+.menu-categories li.menu a.dropdown-toggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #506690;
+    transition: .600s;
+    margin-bottom: 4px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+ul.menu-categories li.menu > .dropdown-toggle svg{
+    margin-right: 10px;
+}
+ul.menu-categories li.menu > .dropdown-toggle.dropdown-toggle:not([data-active="true"]):not([aria-expanded="true"]):hover{
+    background: #3b3f5c;
+    color: #e0e6ed;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    border-radius: 6px;
+}
+ul.menu-categories li.menu > .dropdown-toggle[aria-expanded="true"]{
+    background: rgba(96, 125, 139, 0.54);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    color: #fafafa;
+}
+svg.feather.feather-chevron-right {
+    margin-left: 20px;
+    width: 16px;
+    height: 16px;
+}
+.sidebar ul.menu-categories li > .dropdown-toggle[aria-expanded="true"] svg.feather-chevron-right{
+    transform: rotate(90deg);
+}
+.sidebar ul.menu-categories li.menu a{
+    text-decoration: none;
+}
+.sidebar ul.menu-categories ul.submenu > li a {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px 10px 48px;
+    padding-left: 24px;
+    margin-left: 36px;
+    font-size: 13px;
+    color: #888ea8;
+}
+.sidebar ul.menu-categories ul.submenu > li ul.sub-submenu > li a {
+    position: relative;
+    padding: 10px 12px 10px 48px;
+    padding-left: 30px;
+    margin-left: 47px;
+    font-size: 12px;
+    color: #515365;
+}
+.submenu li.active a{
+    color: #009687;
+}
+.submenu li a{
+    color: darkgrey;
+    text-decoration: none;
+}
+.sidebar ul.menu-categories ul.submenu > li:hover > a, .sidebar ul.menu-categories ul.submenu ul.sub-submenu > li:hover > a{
+    color: #009687;
+}
+.sidebar ul.menu-categories li.menu ul.submenu > li a:before{
+    background-color: #009688;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 3px;
+    top: 17.5px;
+    left: 13px;
+    border-radius: 50%;
+}
+.main-content{
+    height: 100vh;
+    margin-top: 125px;
+    margin-left: 230px;
+}
+.px-spacing{
+    padding: 0px 20px;
+}
+.layout-element{
+    padding-bottom: 25px;
+}
+.widget{
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    background: #0e1726;
+}
+#widget-2{
+    margin: 0 auto;
+}
+.widget-head, .w-numeric-value{
+    display: flex;
+    justify-content: space-between;
+}
+.w-numeric-value{
+    padding: 20px;
+    color: #fff;
+}
+.w-numeric-value .w-numeric-title {
+    font-size: 13px;
+    color: #888ea8;
+    font-weight: 600;
+}
+.w-numeric-value .w-value {
+    font-size: 19px;
+    display: block;
+    color: #e0e6ed;
+    font-weight: 700;
+    margin-bottom: -5px;
+}
+.w-numeric-value .w-icon {
+    background: #e2a03f;
+    padding: 12px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-self: center;
+    height: 45px;
+    width: 45px;
+}
+.widget-head a{
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 7px;
+    background: #1b55e2;
+    color: #fff;
+    border-radius: 4px;
+}
+.widget-content{
+    min-height: 390px;
+    overflow: hidden;
+}
+.widget-content svg{
+    width: 100%;
+    min-height: 380px;
+}
+.widget-content .apexcharts-yaxis-title, .apexcharts-xaxis-title {
+    font-weight: 600;
+    fill: #bfc9d4;
+}
+.apexcharts-legend-text {
+    color: #bfc9d4!important;
+}
+.apexcharts-tooltip{
+    display: none;
+}
+.w-chart{
+    overflow: hidden;
+}
