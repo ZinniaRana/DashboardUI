@@ -133,7 +133,7 @@ code { color: #e7515a; }
     min-width: 7rem;
     left: -40% !important;
     transform: translate(-50%, 0) !important;
-    top: 160% !important;
+    top: 100% !important;
     z-index: 1070;
     padding: 6px 6px;
     border: none;
@@ -214,7 +214,6 @@ code { color: #e7515a; }
     position: fixed;
     top: 120px;
     left: 16px;
-    max-height: 670px;
     overflow: auto;
 }
 .menu-categories{
@@ -303,10 +302,9 @@ svg.feather.feather-chevron-right {
     position: relative;
     width: 50%;
     flex-grow: 8;
-    padding-left: 30px;
     margin-top: 126px;
     margin-bottom: 0;
-    margin-left: 212px;
+    margin-left: 232px;
     transition: .600s;
 }
 .px-spacing{
